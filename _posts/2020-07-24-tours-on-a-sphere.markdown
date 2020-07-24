@@ -2,13 +2,13 @@
 layout: post
 title:  "Tours on a sphere"
 date:   2020-07-24 11:19:35 -0300
-categories: jekyll update
+tags: geometry mathematica
 ---
 A while ago I stumbled upon this nice geometry problem:
 
 > Pick a point $$p$$ on the unit sphere and fix some length $$L$$. If we start at $$p$$ and move $$L$$ units of length northward, then $$L$$ eastward, $$L$$ southward and finally $$L$$ westward, do we end up at the same point we started from?
 
-The answer, somewhat surprisingly, depends on the point $$p$$ we start from, although generically we do _not_ end up at the same place. This happens because when moving north or southward our trajectory lies on meridians, which are all [great circles][great-circles], while on the other hand the length of parallels depends on their latitude: as we go near the poles, parallels are shorter. For example, if we start up on a point close to the equator but lying on the northern hemisphere, our first trip on the northernmost parallel sweeps up a broader angle than the southernmost, since the first one is shorter. In this way we end up on a point slightly eastward than from where we started, as the following picture shows:
+The answer, somewhat surprisingly, depends on the point $$p$$ we start from, although generically we do _not_ end up at the same place.This happens because when moving north or southward our trajectory lies on meridians, which are all [great circles][great-circles], while on the other hand the length of parallels depends on their latitude: as we go near the poles, parallels are shorter. For example, if we start up on a point close to the equator but lying on the northern hemisphere, our first trip on the northernmost parallel sweeps up a broader angle than the southernmost, since the first one is shorter. In this way we end up on a point slightly eastward than from where we started, as the following picture shows:
 
 {:refdef: style="text-align: center;"}
 ![A failed tour round a sphere](/assets/2020-07-24-sphere1.gif)
@@ -42,7 +42,7 @@ so we will end up with a closed trajectory iff $$L/\sin(\phi-L)-L/\sin(\phi)$$ i
 
 The following is the Mathematica snippet I used to generate the graphics above:
 
-{% highlight mathematica%}
+{% highlight r %}
 sphereplot = Show[Graphics3D[{Opacity[0.5], Sphere[]}],
   ParametricPlot3D[{Cos[τ], Sin[τ], 0}, {τ, 0, 2*Pi}, PlotStyle -> {Gray, Dashed}],
   ParametricPlot3D[{Cos[θ]*Sin[ϕ - τ], Sin[θ]*Sin[ϕ - τ], Cos[ϕ - τ]}, {τ, 0, L}],
@@ -65,11 +65,11 @@ You can then either animate ``frames`` in Mathematica using ``ListAnimate@frames
 
 If you'd like to run the code above, you have to set values for ``L``,  ``θ`` and ``ϕ``. Some sensible defaults are ``L = 0.6`` and ``θ = π``. As for ``ϕ``, you can find closed trajectories by using Mathematica's numerical solver:
 
-{% highlight mathematica%}
+{% highlight java%}
 Solve[L/Sin[α - L] - L/Sin[α] == 2*π, α]; 
-{% endhighlight %}
+{% endhighlight %}  
 
-You can come up with some funky solutions f ooling around with different values of ``L``:
+You can come up with some funky solutions fooling around with different values of ``L``:
 
 {:refdef: style="text-align: center;"}
 ![Funky solution 1](/assets/2020-07-24-sphere4.gif)
