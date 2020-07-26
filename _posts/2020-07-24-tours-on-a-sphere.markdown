@@ -2,7 +2,7 @@
 layout: post
 title:  "Tours on a sphere"
 date:   2020-07-24 11:19:35 -0300
-tags: geometry mathematica
+tags: mathematics geometry mathematica
 ---
 A while ago I stumbled upon this nice geometry problem:
 
@@ -63,9 +63,9 @@ frames = ball /@ Range[0, 4, .05];
 
 You can then either animate ``frames`` in Mathematica using ``ListAnimate@frames`` or export it using ``Export["sphere.gif", frames]``.
 
-If you'd like to run the code above, you have to set values for ``L``,  ``θ`` and ``ϕ``. Some sensible defaults are ``L = 0.6`` and ``θ = π``. As for ``ϕ``, you can find closed trajectories by using Mathematica's numerical solver:
+If you'd like to run the code above, you have to set values for ``L``,  ``θ`` and ``ϕ``. Some sensible defaults are ``L = 0.6`` and ``θ = π``. As for ``ϕ``, you can find values for it which produce closed trajectories by using Mathematica's numerical solver:
 
-{% highlight java%}
+{% highlight r%}
 Solve[L/Sin[α - L] - L/Sin[α] == 2*π, α]; 
 {% endhighlight %}  
 
