@@ -78,7 +78,11 @@ You can come up with some funky solutions fooling around with different values o
 ![Funky solution 4](/assets/2020-07-24-sphere7.gif)
 {: refdef}
 
-(Addendum -- 05/08/2020): As [Mark Dominus][mjd] points out, there's a similar version of this problem in riddle form. It goes like this: a hunter leaves his tent, walks one mile south, one mile east and one mile north, finding himself in front of his tent again. There, he sees a bear and shoots it. What color was it? The answer, as you may expect after reading this post, is [juvgr, fvapr gurer ner abg n ybg bs cynprf gur uhagre pbhyq unir fgnegrq sebz, naq bar bs gurz vf gur Abegu cbyr][rot-13].
+(Addendum -- 05/08/2020): As [Mark Dominus][mjd] points out, there's a similar version of this problem in riddle form. It goes like this: 
+
+>A hunter leaves his tent, walks one mile south, one mile east and one mile north, finding himself in front of his tent again. There, he sees a bear and shoots it. What color was it?
+
+The answer, as you may expect after reading this post, is [juvgr, fvapr gurer ner abg n ybg bs cynprf gur uhagre pbhyq unir fgnegrq sebz, naq bar bs gurz vf gur Abegu cbyr][rot-13].
 
 [rot-13]: https://rot13.com/
 [mjd]: https://blog.plover.com/
